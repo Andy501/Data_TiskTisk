@@ -1,21 +1,23 @@
--- CREATE DATABASE SensitiFaux;
+--Demo of app logic and analytics. THIS IS NOT REAL DATA. Customer names and information are computer generated...
+
+CREATE DATABASE SensitiFaux;
 USE SensitiFaux; 
 
--- CREATE TABLE Customer(
---     id int NOT NULL AUTO_INCREMENT, 
---     firstName VARCHAR(50), 
---     lastName VARCHAR(50), 
---     cNum VARCHAR(16),
---     balance decimal (20,2),
---     PRIMARY KEY(id)
--- ); 
+CREATE TABLE Customer(
+     id int NOT NULL AUTO_INCREMENT, 
+     firstName VARCHAR(50), 
+     lastName VARCHAR(50), 
+     cNum VARCHAR(16),     
+     balance decimal (20,2),
+     PRIMARY KEY(id)
+  ); 
 
 
--- CREATE TABLE Identifier(
---     id int NOT NULL AUTO_INCREMENT, 
---     social VARCHAR(13),
---     FOREIGN KEY(id) REFERENCES Customer(id)
--- ); 
+CREATE TABLE Identifier(
+     id int NOT NULL AUTO_INCREMENT, 
+     social VARCHAR(13),
+     FOREIGN KEY(id) REFERENCES Customer(id)
+ ); 
 
 
 
